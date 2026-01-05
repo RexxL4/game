@@ -340,7 +340,7 @@ scene.setBackgroundColor(2)
 controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
 game.onUpdate(function () {
-    if (mySprite.tileKindAt(TileDirection.Top, sprites.dungeon.chestClosed)) {
+    if (mySprite.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchUp)) {
         if (controller.A.isPressed()) {
             pauseUntil(() => !(controller.A.isPressed()))
             tiles.setTileAt(mySprite.tilemapLocation().getNeighboringLocation(CollisionDirection.Top), sprites.dungeon.chestOpen)
