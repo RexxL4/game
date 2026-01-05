@@ -343,7 +343,8 @@ game.onUpdate(function () {
     if (mySprite.tileKindAt(TileDirection.Top, sprites.dungeon.greenSwitchUp)) {
         if (controller.A.isPressed()) {
             pauseUntil(() => !(controller.A.isPressed()))
-            tiles.setTileAt(mySprite.tilemapLocation().getNeighboringLocation(CollisionDirection.Top), sprites.dungeon.chestOpen)
+            tiles.setTileAt(mySprite.tilemapLocation().getNeighboringLocation(CollisionDirection.Top), sprites.dungeon.greenSwitchDown)
+            tiles.replaceAllTiles(sprites.dungeon.floorMixed, sprites.dungeon.stairNorth)
         }
     }
 })
